@@ -1,6 +1,6 @@
 export class isEvenOrOdd {
 
-    evenOrOdd(num){
+    verifier(num){
         if(typeof num == "number"){
             if(num%2 === 0 && num !== 0) return "Es par"
             else if(num%2 !==0 && num !== 0) return "Es impar"

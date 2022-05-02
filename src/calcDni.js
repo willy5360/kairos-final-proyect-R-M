@@ -32,10 +32,19 @@ export class dniCheck {
             let dniLetter = dniSplitted.pop();
             let moduleDni = Number(dniSplitted.join("")) % 23;
 
-            if (lastLetter[moduleDni] == dniLetter && dni.length == 9) return "Dni is valid";
-            else return "Dni is invalid";
+            if (lastLetter[moduleDni] == dniLetter && dni.length == 9) return {
+                status: "Ok",
+                message: ""
+            };
+            else return {
+                status: "Error",
+                message: "DNI must have 9 characters where 8 are numbers and the last one is a letter"
+            };
         } else {
-            return "Invalid Input";
+            return {
+                status: "Invalid",
+                message: "Invalid Input"
+            };
         }
     }
 }

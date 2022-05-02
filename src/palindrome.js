@@ -1,9 +1,9 @@
 export class checkPalindrome {
 
-    aValidPalindrome(sentence){
+    verifier(sentence){
         if(typeof sentence === "string" && sentence.length != 0){
 
-            let cleanSentenceLowerCase = sentence.toLowerCase().replace(/[\W_]/g, "")
+            let cleanSentenceLowerCase = sentence.normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, "").toLowerCase()
             let reversedCleanedSentence = cleanSentenceLowerCase.split("").reverse().join("")
 
             if(cleanSentenceLowerCase === reversedCleanedSentence) return "It's a palindrome"

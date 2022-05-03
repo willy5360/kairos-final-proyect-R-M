@@ -1,4 +1,4 @@
-import { isEvenOrOdd } from "../src/even-odd"
+import { isEvenOrOdd } from "../src/func-test/even-odd"
 
 describe("Es par o impar", () => {
 

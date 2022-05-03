@@ -1,4 +1,4 @@
-import { checkPalindrome } from "../src/palindrome"
+import { checkPalindrome } from "../src/func-test/palindrome"
 
 describe("Is it a palindrome?", () => {
 

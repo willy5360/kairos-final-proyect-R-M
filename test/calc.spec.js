@@ -1,4 +1,4 @@
-import { Calculadora } from "../src/calc";
+import { Calculadora } from "../src/func-test/calc";
 
 describe("Calculadora", () => {
 

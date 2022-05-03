@@ -1,4 +1,4 @@
-import { dniCheck } from "../src/calcDni"
+import { dniCheck } from "../src/func-test/calcDni"
 
 describe("DNI checker", () => {
 

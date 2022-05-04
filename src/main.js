@@ -1,7 +1,17 @@
-import './main.css';
+import "./main.css";
+import "./app";
+import "./pages/one-char.page.js";
+import "./pages/home.page"
+import "./pages/all-chars.pages"
 
-console.log('Vanilla');
-console.log('Vanilla');
+import { Router } from "@vaadin/router";
 
-import "./app"
-import "./components/Card/card"
+const outlet = document.getElementById("outlet");
+const router = new Router(outlet);
+
+router.setRoutes([
+    { path: "/", component: "home-page"},
+    { path: "/card", component: "card-person"},
+    { path: "/people", component: "card-people"}
+
+])

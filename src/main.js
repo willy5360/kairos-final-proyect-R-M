@@ -11,7 +11,7 @@ const router = new Router(outlet);
 
 router.setRoutes([
     { path: "/", component: "home-page"},
-    { path: "/card", component: "card-person"},
+    { path: "/character", component: "card-person"},
     { path: "/people", component: "card-people"}
 
 ])

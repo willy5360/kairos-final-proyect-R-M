@@ -1,6 +1,7 @@
 import { html, LitElement } from "lit";
 import { OneCharUseCase } from "../usecases/one-char.usecase";
 import "../ui/char.ui"
+import { ApiCharacterInfo } from "../usecases/api-info.usecase";
 
 export class CardPerson extends LitElement {
     static get properties() {
@@ -22,7 +23,10 @@ export class CardPerson extends LitElement {
 
     async randomChar(){
 
-        let randomCharacter = Math.floor(Math.random()*826);
+        const info = new ApiCharacterInfo()
+        const allAvailableChars = await info.execute()
+
+        const randomCharacter = Math.floor(Math.random()*allAvailableChars.count);
         const oneChar = new OneCharUseCase();
         this.char = await oneChar.execute(randomCharacter)
     }

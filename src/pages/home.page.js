@@ -1,11 +1,15 @@
-export class Home extends HTMLElement {
-
-    constructor(){
-        super()
-    }
+import { html, LitElement } from "lit"
+import "../components/contact-form"
+export class Home extends LitElement {
 
     connectedCallback(){
-        this.innerHTML = "esto es el home"
+        super.connectedCallback()
+    }
+
+    render(){
+        return html`
+            <contact-form></contact-form>
+        `
     }
 }
 

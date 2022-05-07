@@ -1,6 +1,10 @@
 import {html, LitElement } from "lit";
-import { AllCharUseCase } from "../usecases/all-chars.usecase";
+
 import "../ui/all-char.ui"
+import { AllCharUseCase } from "../usecases/all-chars.usecase";
+import { ApiCharacterInfo } from "../usecases/api-info.usecase";
+import { NextCharacters } from "../usecases/next-chars.usecase";
+import { PreviousCharacters } from "../usecases/prev-chars.usecase";
 
 export class CardPeople extends LitElement {
 
@@ -9,19 +13,42 @@ export class CardPeople extends LitElement {
             chars: {
                 type: Array,
                 state: true
-            }
+            },
         }
     }
+    
 
     async connectedCallback(){
         super.connectedCallback()
+
+        this.page = 1
+
         const allChars = new AllCharUseCase()
         this.chars = await allChars.execute()
+
+        const info = new ApiCharacterInfo()
+        const max = await info.execute()
+        this.maxPages = max.pages
+    }
+    
+    async nextChar(){ 
+        ++this.page
+        const nextChars = new NextCharacters()
+        this.chars = await nextChars.execute(this.page)
+    }
+
+    async prevChar(){
+        --this.page
+        const prevChars = new PreviousCharacters()
+        const allChars = new AllCharUseCase()
+        this.chars = this.page == 1 ? await allChars.execute() : await prevChars.execute(this.page)
     }
 
     render() {
         return html`
             <all-chars .chars="${this.chars}"></all-chars>
+            <button @click="${this.prevChar}" ?disabled="${this.page == 1 ? true : false}">PREV</button>
+            <button @click="${this.nextChar}" ?disabled="${this.page == (this.maxPages - 1) ? true : false}">NEXT</button>
         `
     }
 }

@@ -23,18 +23,35 @@ export class AllCharsUI extends LitElement{
             
             
             .card-container{
+                position:relative;
                 width: 18rem;
-                border: red solid 3px;
-                margin: 1rem;
+                height:20rem;
+                background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+                border-radius:10px;
+                margin: 10rem 1rem 1rem 1rem;
+                transition: box-shadow 0.3s ease-in-out;  
+            }
+
+            .card-container:hover{
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             }
             
             .card-img{
-                width: 100%;
+                position:absolute;
+                top:-30%;
+                left:15%;
+                width: 70%;
                 height: auto;
+                border-radius:0.5rem;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;  
             }
             
             .card-info{
-                padding: 0.5rem;
+                padding: 6rem 1.5rem;
+            }
+            .card-info h1 {
+                text-align:center;
+                color:white;
             }
         `
     }

@@ -1,4 +1,5 @@
 import { css, html, LitElement } from "lit";
+import "./navbar.css"
 
 export class Navbar extends LitElement{
 
@@ -44,6 +45,10 @@ export class Navbar extends LitElement{
         window.addEventListener("scroll", () => {
             NAVBAR.classList.toggle("sticky", window.scrollY > 0)
         })
+    }
+
+    createRenderRoot(){
+        return this;
     }
 
 }

@@ -3,6 +3,7 @@ import "./app";
 import "./pages/one-char.page.js";
 import "./pages/home.page"
 import "./pages/all-chars.pages"
+import "./components/navbar/navbar"
 
 import { Router } from "@vaadin/router";
 

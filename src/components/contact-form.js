@@ -7,11 +7,11 @@ export class ContactForm extends LitElement {
             form{
                 display: flex;
                 flex-direction: column;
+                height:50vh;
                 width: 60%;
                 justify-content:center;
                 align-items: center;
-                height: 50vh;
-                margin: 5rem auto;
+                margin: auto;
             }
         `
     }

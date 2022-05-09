@@ -1,10 +1,10 @@
 import {html, LitElement } from "lit";
-
-import "../ui/all-char.ui"
 import { AllCharUseCase } from "../usecases/all-chars.usecase";
 import { ApiCharacterInfo } from "../usecases/api-info.usecase";
 import { NextCharacters } from "../usecases/next-chars.usecase";
 import { PreviousCharacters } from "../usecases/prev-chars.usecase";
+import "../ui/all-char.ui"
+
 
 export class CardPeople extends LitElement {
 
@@ -27,7 +27,7 @@ export class CardPeople extends LitElement {
         this.chars = await allChars.execute()
 
         const info = new ApiCharacterInfo()
-        const max = await info.execute()
+        const max = await info.execute("character")
         this.maxPages = max.pages
     }
     
@@ -50,6 +50,10 @@ export class CardPeople extends LitElement {
             <button @click="${this.prevChar}" ?disabled="${this.page == 1 ? true : false}">PREV</button>
             <button @click="${this.nextChar}" ?disabled="${this.page == (this.maxPages - 1) ? true : false}">NEXT</button>
         `
+    }
+
+    createRenderRoot(){
+        return this;
     }
 }
 

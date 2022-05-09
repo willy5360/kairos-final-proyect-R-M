@@ -28,7 +28,7 @@ export class AllCharsUI extends LitElement{
                 height:20rem;
                 background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
                 border-radius:10px;
-                margin: 10rem 1rem 1rem 1rem;
+                margin: 13rem 1rem 1rem 1rem;
                 transition: box-shadow 0.3s ease-in-out;  
             }
 

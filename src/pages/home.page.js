@@ -1,6 +1,14 @@
-import { html, LitElement } from "lit"
+import { css, html, LitElement } from "lit"
 import "../components/contact-form"
 export class Home extends LitElement {
+
+    static get styles(){
+        return css`
+        contact-form{
+                height: 100vh;
+            }
+        `
+    }
 
     connectedCallback(){
         super.connectedCallback()

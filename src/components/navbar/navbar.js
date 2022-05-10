@@ -1,13 +1,12 @@
 import { css, html, LitElement } from "lit";
-import "./navbar.css"
+import "./navbar.css";
 
-export class Navbar extends LitElement{
-
-    static get styles(){
+export class Navbar extends LitElement {
+    static get styles() {
         return css`
-            :host{
+            :host {
                 position: fixed;
-                top:0;
+                top: 0;
                 left: 0;
                 display: flex;
                 width: 100%;
@@ -18,39 +17,37 @@ export class Navbar extends LitElement{
             }
 
             :host .navbar {
-                display:flex;
+                display: flex;
                 width: 100%;
                 align-items: center;
                 justify-content: space-around;
                 text-decoration: none;
             }
-            
-        `
+        `;
     }
-    
-    render(){
+
+    render() {
         return html`
-             <nav class="navbar">
-                <h1>Rick and morty</h1>
+            <nav class="navbar">
+                <h1><a href="/"> Rick and morty </a></h1>
                 <a href="/">home</a>
                 <a href="/character">character</a>
                 <a href="/people">people</a>
-            </nav>   
-        `
+            </nav>
+        `;
     }
 
-    connectedCallback(){
+    connectedCallback() {
         super.connectedCallback();
-        const NAVBAR = document.querySelector("navigation-bar")
+        const NAVBAR = document.querySelector("navigation-bar");
         window.addEventListener("scroll", () => {
-            NAVBAR.classList.toggle("sticky", window.scrollY > 0)
-        })
+            NAVBAR.classList.toggle("sticky", window.scrollY > 0);
+        });
     }
 
-    createRenderRoot(){
+    createRenderRoot() {
         return this;
     }
-
 }
 
-customElements.define("navigation-bar", Navbar)
+customElements.define("navigation-bar", Navbar);

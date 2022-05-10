@@ -1,4 +1,4 @@
-import { html, LitElement } from "lit";
+import {css, html, LitElement } from "lit";
 import { OneCharUseCase } from "../usecases/one-char.usecase";
 import { ApiCharacterInfo } from "../usecases/api-info.usecase";
 import "../ui/char.ui"
@@ -12,6 +12,19 @@ export class CardPerson extends LitElement {
                 state: true,
             },
         };
+    }
+
+    static get styles(){
+        return css`
+            :host{
+                width:100%;
+                height:100vh;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        `
     }
 
     async connectedCallback() {
@@ -34,8 +47,8 @@ export class CardPerson extends LitElement {
 
     render(){
         return html`
-            <button @click="${this.randomChar}">randomME</button>
             <char-ui .char="${this.char}"></char-ui>
+            <button @click="${this.randomChar}">randomME</button>
         `
     }
 }

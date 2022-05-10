@@ -11,25 +11,19 @@ export class OneCharUI extends LitElement{
     }
 
     static get styles(){
-        return css`
-            .cards{
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                justify-content: space-around;
-            
-            }
-            
-            
+        return css`     
             .card-container{
-                width: 70%;
+                width: 100%;
                 border: red solid 3px;
                 margin: 1rem;
+                display: flex;
+                flex-direction; row;
             }
             
             .card-img{
                 width: 100%;
                 height: auto;
+                border-radius:10px;
             }
             
             .card-info{
@@ -44,10 +38,11 @@ export class OneCharUI extends LitElement{
 
     render(){
         return this.char && html`
-            <div class="cards">
-                <div class="card-container">
-                        <img class="card-img" src="${this.char.image}"/>
-                        <div class="card-info">
+                <article class="card-container">
+                        <figure>
+                            <img class="card-img" src="${this.char.image}"/>
+                        </figure>
+                        <main class="card-info">
                             <h1>${this.char.name}</h1>
                             <p>Status: ${
                                 this.char.status == "Alive"
@@ -59,9 +54,8 @@ export class OneCharUI extends LitElement{
                             <p></p>
                             <p></p>
                             <p></p>
-                        </div>
-                </div>
-            </div>
+                        </main>
+                </article>
         `
     }
 }

@@ -37,7 +37,7 @@ export class CharacterRepository {
                 status ? `&status=${status}` : ""
             }`
         ).catch(error => {
-            console.log("aqui el error ",error.response)
+            console.log("Error",error.response)
         });
 
         console.log("fitler", filtered);

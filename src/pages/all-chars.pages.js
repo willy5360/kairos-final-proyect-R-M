@@ -1,10 +1,10 @@
 import { css, html, LitElement } from "lit";
 import { AllCharUseCase } from "../usecases/all-chars.usecase";
-import { ApiCharacterInfo } from "../usecases/api-info.usecase";
+import { ApiInfo } from "../usecases/api-info.usecase";
 import { NextCharacters } from "../usecases/next-chars.usecase";
 import { PreviousCharacters } from "../usecases/prev-chars.usecase";
 import { FilteredCharacters } from "../usecases/filtered-chars.usecase";
-import "../ui/all-char.ui";
+import "../ui/all-chars/all-char.ui";
 
 export class CardPeople extends LitElement {
     static get properties() {
@@ -24,9 +24,8 @@ export class CardPeople extends LitElement {
         const allChars = new AllCharUseCase();
         this.chars = await allChars.execute();
 
-        const info = new ApiCharacterInfo();
-        const max = await info.execute("character");
-        this.maxPages = max.pages;
+        const max = await ApiInfo.execute("character");
+        this.maxPages = max.info.pages;
     }
 
     async nextChar() {
@@ -47,8 +46,8 @@ export class CardPeople extends LitElement {
 
     async requestData(event) {
         event.preventDefault();
-        let name = document.getElementById("character-name");
-        let status = document.getElementById("status");
+        let name = this.querySelector("#character-name");
+        let status = this.querySelector("#status");
 
         const filteredChars = new FilteredCharacters();
         const allChars = new AllCharUseCase();

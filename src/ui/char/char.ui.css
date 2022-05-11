@@ -1,0 +1,21 @@
+.card__oneChar-container{
+    width: 100%;
+    border: red solid 3px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.card__oneChar-img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card__oneChar-info{
+    padding: 0.5rem;
+}
+
+.card__oneChar-info h1 {
+    text-align: center
+}

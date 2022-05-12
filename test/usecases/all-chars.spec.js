@@ -8,15 +8,15 @@ describe("All character Use Case", () => {
     beforeEach(() => {
         CharacterRepository.mockClear()
     })
+    CharacterRepository.mockImplementation(()=> {
+        return {
+            getAllChars: () =>{
+                return ALLCHARS
+            }
+        }
+    })
     it("Should execute correct", async () => {
 
-        CharacterRepository.mockImplementation(()=> {
-            return {
-                getAllChars: () =>{
-                    return ALLCHARS
-                }
-            }
-        })
 
         const useCase = new AllCharUseCase()
         const allChars = await useCase.execute()

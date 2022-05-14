@@ -1,21 +1,101 @@
+char-ui{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 .card__oneChar-container{
-    width: 100%;
-    border: red solid 3px;
+    width: 80%;
+    background-image: linear-gradient(to right, #222831 0%, #F05454 84%);
     margin: 1rem;
+    border-radius: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    -webkit-box-reflect: below 2px
+    linear-gradient(transparent, transparent, #0004);
 }
 
 .card__oneChar-img{
-    width: 100%;
+    width: 18rem;
     height: auto;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .card__oneChar-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0.5rem;
 }
 
 .card__oneChar-info h1 {
+    font-size: 2rem;
     text-align: center
+}
+
+.card__status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}   
+
+.Alive{
+    animation: status-alive 500ms infinite ease-in
+}
+
+@keyframes status-alive {
+    0%{
+        background-color: rgb(111, 255, 111);
+    }
+    100%{
+        background-color: rgb(77, 128, 0);
+    }
+}
+
+.Dead{
+    animation: status-dead 2s infinite ease-in;
+    color:white;
+}
+
+@keyframes status-dead {
+    0%{
+        background-color: rgb(110, 110, 110);
+    }
+    100%{
+        background-color: rgb(27, 29, 24);
+    }
+}
+
+.unknown{
+    animation: status-unknown 1s infinite ease-in;
+}
+
+@keyframes status-unknown {
+    0%{
+        background-color: rgb(110, 30, 30);
+        color:white;
+    }
+    25%{
+        background-color: rgb(98, 133, 47);
+        color: teal;
+    }
+    50%{
+        background-color: rgb(109, 34, 72);
+        color:rgb(68, 255, 30);
+    }
+    100%{
+        background-color: rgb(62, 148, 151);
+        color:black;
+    }
 }

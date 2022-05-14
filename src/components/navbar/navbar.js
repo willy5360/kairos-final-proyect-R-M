@@ -28,9 +28,9 @@ export class Navbar extends LitElement {
 
                     </figure>
                 </a>
-                <a class="font-medium" href="/">home</a>
-                <a class="font-medium" href="/character">character</a>
-                <a class="font-medium" href="/people">people</a>
+                <a class="font-medium" href="/">Home</a>
+                <a class="font-medium" href="/character">Character</a>
+                <a class="font-medium" href="/people">People</a>
             </nav>
         `;
     }

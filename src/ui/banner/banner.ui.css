@@ -1,0 +1,22 @@
+.main_character__tittle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 5rem;
+	background: linear-gradient(to right, #312dff 0%, #F05454 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    transition: 0.7s;
+}
+
+@media only screen and (max-width: 768px){
+    .main_character__tittle{
+        font-size: 2rem;
+    }
+}

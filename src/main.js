@@ -2,7 +2,7 @@ import "./main.css";
 import "./app";
 import "./pages/one-char/one-char.page.js";
 import "./pages/home/home.page"
-import "./pages/all-chars.pages"
+import "./pages/all-char/all-chars.pages"
 import "./components/navbar/navbar"
 
 import { Router } from "@vaadin/router";

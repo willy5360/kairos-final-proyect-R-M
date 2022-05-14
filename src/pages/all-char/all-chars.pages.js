@@ -1,10 +1,11 @@
 import { css, html, LitElement } from "lit";
-import { AllCharUseCase } from "../usecases/all-chars.usecase";
-import { ApiInfo } from "../usecases/api-info.usecase";
-import { NextCharacters } from "../usecases/next-chars.usecase";
-import { PreviousCharacters } from "../usecases/prev-chars.usecase";
-import { FilteredCharacters } from "../usecases/filtered-chars.usecase";
-import "../ui/all-chars/all-char.ui";
+import { AllCharUseCase } from "../../usecases/all-chars.usecase";
+import { ApiInfo } from "../../usecases/api-info.usecase";
+import { NextCharacters } from "../../usecases/next-chars.usecase";
+import { PreviousCharacters } from "../../usecases/prev-chars.usecase";
+import { FilteredCharacters } from "../../usecases/filtered-chars.usecase";
+import "../../ui/all-chars/all-char.ui";
+import "./all-chars.css";
 
 export class CardPeople extends LitElement {
     static get properties() {
@@ -52,28 +53,29 @@ export class CardPeople extends LitElement {
         const filteredChars = new FilteredCharacters();
         const allChars = new AllCharUseCase();
 
-        this.chars = await filteredChars.execute(name.value)
+        this.chars = (await filteredChars.execute(name.value))
             ? await filteredChars.execute(name.value, status.value)
-            : await allChars.execute() ;
+            : await allChars.execute();
         name.value = "";
         status.value = "";
     }
 
     render() {
         return html`
-            <form class="card-people__form" @submit="${this.requestData}">
-                <label htmlFor="name">Name:</label>
-                <input name="name" id="character-name" />
-                <label htmlFor="status">Status:</label>
-                <select name="status" id="status">
-                    <option value="">None</option>
-                    <option value="alive">Alive</option>
-                    <option value="unknown">Unknown</option>
-                    <option value="dead">Dead</option>
-                </select>
-                <input type="submit" name="send" value="Send" />
-            </form>
-            <all-chars .chars="${this.chars}"></all-chars>
+            <all-chars .chars="${this.chars}">
+                <form class="card-people__form" @submit="${this.requestData}">
+                    <label htmlFor="name">Name:</label>
+                    <input name="name" id="character-name" />
+                    <label htmlFor="status">Status:</label>
+                    <select name="status" id="status">
+                        <option value="">None</option>
+                        <option value="alive">Alive</option>
+                        <option value="unknown">Unknown</option>
+                        <option value="dead">Dead</option>
+                    </select>
+                    <input type="submit" name="send" value="Send" />
+                </form>
+            </all-chars>
             <button
                 @click="${this.prevChar}"
                 ?disabled="${this.page == 1 ? true : false}"

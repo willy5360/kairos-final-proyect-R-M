@@ -36,6 +36,7 @@ export class CardPerson extends LitElement {
 
     render(){
         return html`
+            <img class="openEyes" src="https://res.cloudinary.com/willykronara/image/upload/v1652541138/pngwing.com_1_xgnwtg.png" alt="Picture of rick opening Morty's eyes" />
             <char-ui .char="${this.char}"></char-ui>
             <button @click="${this.randomChar}">randomME</button>
         `

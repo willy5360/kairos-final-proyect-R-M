@@ -26,7 +26,7 @@ export class SeasonTrailers extends LitElement {
                         <a
                             class="trailer__video-container"
                             href="${trailer.youtubeUrl}"
-                            id="season__${trailer.season} "
+                            id="season__${trailer.season}"
                             target="_blank"
                         >
                             <video

@@ -15,22 +15,16 @@ export class OneCharUI extends LitElement {
             this.char &&
             html`
                 <article class="card__oneChar-container">
-                    <figure>
                         <img class="card__oneChar-img" src="${this.char.image}" />
-                    </figure>
                     <main class="card__oneChar-info">
                         <h1>${this.char.name}</h1>
-                        <p>
+                        <p>Species: ${this.char.species}</p>
+                        <p>type: ${this.char.type}</p>
+                        <p>Origin: ${this.char.origin.name}</p>
+                        <p class="card__status ${this.char.status}">
                             Status:
-                            ${this.char.status == "Alive"
-                                ? "Alive 🟢"
-                                : this.char.status == "Dead"
-                                ? "Dead ⚫️"
-                                : "Unknown 🟡"}
+                            ${this.char.status.toUpperCase()}
                         </p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
                     </main>
                 </article>
             `

@@ -20,11 +20,25 @@
 .cover-container > h1 {
     color: white;
     text-align: center;
-    font-size: 5.5vw;
+    font-size: 5rem;
+    font-weight: bold;
+    transition: 0.7s;
 }
 
 .cover-container > p {
-    color: white;
+    color: #F05454;
     margin-top: 1rem;
-    font-size: 2.5vw;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: 0.7s;
+
+}
+
+@media only screen and (max-width: 768px){
+    .cover-container > h1{
+        font-size: 3rem;
+    }
+    .cover-container > p{
+        font-size: 1.5rem;
+    }
 }

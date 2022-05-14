@@ -4,5 +4,14 @@ card-person{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    background-color: var(--background-main);
+}
+
+.openEyes{
+    position: absolute;
+    width: 40%;
+    height: auto;
+    bottom: 0;
+    left: 0;
 }

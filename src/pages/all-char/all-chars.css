@@ -1,0 +1,8 @@
+.card-people__form{
+    padding-top: 9vh;
+    background-color: #30475E;
+    width: 100%;
+    height: 5vh;
+    position: fixed;
+    z-index: 1;
+}

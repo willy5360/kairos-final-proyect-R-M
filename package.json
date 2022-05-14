@@ -46,9 +46,9 @@
     "nyc": {
         "report-dir": "cypress-coverage",
         "exclude": [
-        "instrumented/**"
+            "instrumented/**"
         ]
-        },
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
@@ -84,6 +84,7 @@
     "dependencies": {
         "@vaadin/router": "^1.7.4",
         "axios": "^0.27.2",
-        "lit": "^2.2.3"
+        "lit": "^2.2.3",
+        "valtio": "^1.6.0"
     }
 }

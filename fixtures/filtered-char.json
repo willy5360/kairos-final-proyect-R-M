@@ -22,9 +22,7 @@
                 "url": "https://rickandmortyapi.com/api/location/3"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/14.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/10"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/10"],
             "url": "https://rickandmortyapi.com/api/character/14",
             "created": "2017-11-04T20:51:31.373Z"
         },
@@ -67,9 +65,7 @@
                 "url": "https://rickandmortyapi.com/api/location/3"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/42.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/22"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/22"],
             "url": "https://rickandmortyapi.com/api/character/42",
             "created": "2017-11-05T10:15:53.349Z"
         },
@@ -89,9 +85,7 @@
                 "url": "https://rickandmortyapi.com/api/location/3"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/53.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/10"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/10"],
             "url": "https://rickandmortyapi.com/api/character/53",
             "created": "2017-11-05T11:28:38.627Z"
         },
@@ -134,9 +128,7 @@
                 "url": "https://rickandmortyapi.com/api/location/3"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/95.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/22"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/22"],
             "url": "https://rickandmortyapi.com/api/character/95",
             "created": "2017-12-01T11:54:36.670Z"
         },
@@ -156,9 +148,7 @@
                 "url": "https://rickandmortyapi.com/api/location/20"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/113.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/10"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/10"],
             "url": "https://rickandmortyapi.com/api/character/113",
             "created": "2017-12-26T13:43:29.296Z"
         },
@@ -201,9 +191,7 @@
                 "url": "https://rickandmortyapi.com/api/location/3"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/200.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/22"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/22"],
             "url": "https://rickandmortyapi.com/api/character/200",
             "created": "2017-12-30T12:49:52.971Z"
         },
@@ -223,9 +211,7 @@
                 "url": "https://rickandmortyapi.com/api/location/3"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/209.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/10"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/10"],
             "url": "https://rickandmortyapi.com/api/character/209",
             "created": "2017-12-30T14:00:06.755Z"
         },
@@ -245,9 +231,7 @@
                 "url": "https://rickandmortyapi.com/api/location/3"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/231.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/22"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/22"],
             "url": "https://rickandmortyapi.com/api/character/231",
             "created": "2017-12-30T16:23:45.894Z"
         },
@@ -267,9 +251,7 @@
                 "url": "https://rickandmortyapi.com/api/location/3"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/298.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/10"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/10"],
             "url": "https://rickandmortyapi.com/api/character/298",
             "created": "2017-12-31T20:37:30.747Z"
         },
@@ -289,9 +271,7 @@
                 "url": "https://rickandmortyapi.com/api/location/3"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/359.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/10"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/10"],
             "url": "https://rickandmortyapi.com/api/character/359",
             "created": "2018-01-10T18:14:50.992Z"
         },
@@ -311,9 +291,7 @@
                 "url": "https://rickandmortyapi.com/api/location/3"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/801.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/51"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/51"],
             "url": "https://rickandmortyapi.com/api/character/801",
             "created": "2021-11-02T13:12:26.860Z"
         },
@@ -333,9 +311,7 @@
                 "url": "https://rickandmortyapi.com/api/location/3"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/803.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/51"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/51"],
             "url": "https://rickandmortyapi.com/api/character/803",
             "created": "2021-11-02T13:13:51.515Z"
         },
@@ -355,9 +331,7 @@
                 "url": "https://rickandmortyapi.com/api/location/3"
             },
             "image": "https://rickandmortyapi.com/api/character/avatar/811.jpeg",
-            "episode": [
-                "https://rickandmortyapi.com/api/episode/51"
-            ],
+            "episode": ["https://rickandmortyapi.com/api/episode/51"],
             "url": "https://rickandmortyapi.com/api/character/811",
             "created": "2021-11-02T14:06:40.357Z"
         }

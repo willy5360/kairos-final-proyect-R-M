@@ -4,7 +4,7 @@
     width: 100%;
     justify-content: space-around;
     background-color: #30475E;
-
+    padding: 8rem 0;
 }
 
 .card-container {
@@ -13,7 +13,7 @@
     height: 20rem;
     background-color: #F05454;
     border-radius: 10px;
-    margin: 13rem 1rem 1rem 1rem;
+    margin: 10rem 1rem 1rem 1rem;
     transition: box-shadow 0.3s ease-in-out;
     display: flex;
     justify-content: center;

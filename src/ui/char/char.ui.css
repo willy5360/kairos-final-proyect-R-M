@@ -20,7 +20,7 @@ char-ui{
 }
 
 .card__oneChar-img{
-    width: 18rem;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -97,5 +97,17 @@ char-ui{
     100%{
         background-color: rgb(62, 148, 151);
         color:black;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .card__oneChar-container{
+        flex-direction: column;
+    }
+    .card__oneChar-info h1 {
+        font-size: 1.5rem;
+    }
+    .card__oneChar-info p {
+        font-size: 0.8rem;
     }
 }

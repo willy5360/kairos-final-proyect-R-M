@@ -6,3 +6,16 @@
     position: fixed;
     z-index: 1;
 }
+
+.card-people__buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5vh;
+    background-color: #30475E;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}

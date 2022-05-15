@@ -75,19 +75,22 @@ export class CardPeople extends LitElement {
                     </select>
                     <input type="submit" name="send" value="Send" />
                 </form>
+                <footer class="card-people__buttons">
+                    <button
+                        @click="${this.prevChar}"
+                        ?disabled="${this.page == 1 ? true : false}"
+                    >
+                        PREV
+                    </button>
+                    <button
+                        @click="${this.nextChar}"
+                        ?disabled="${this.page == this.maxPages - 1 ? true : false}"
+                    >
+                        NEXT
+                    </button>
+                </footer>
             </all-chars>
-            <button
-                @click="${this.prevChar}"
-                ?disabled="${this.page == 1 ? true : false}"
-            >
-                PREV
-            </button>
-            <button
-                @click="${this.nextChar}"
-                ?disabled="${this.page == this.maxPages - 1 ? true : false}"
-            >
-                NEXT
-            </button>
+            
         `;
     }
 

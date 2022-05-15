@@ -1,2 +1,31 @@
+stages:
+  - build
+  - deploy
+  - sonarCloud
+
+app-build:
+  stage: build
+  image: node:14.19.1-alpine3.14
+  script:
+    - npm install
+    - npm run build -- --output-path=dist
+  artifacts:
+    expire_in: 2hrs
+    paths:
+      - dist/
+
+app-deploy:
+  stage: deploy
+  image: docker:20.10.14-alpine3.15
+  services:
+    - docker:dind
+  dependencies:
+    - app-build
+  before_script:
+    - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS
+    - 'PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: ''{ print $2 }'' | sed ''s/[",]//g'' | tr -d ''[[:space:]]'')'
+  script:
+    - docker build -t $DOCKER_HUB_USER/$CI_PROJECT_NAME:$PACKAGE_VERSION .
+    - docker push $DOCKER_HUB_USER/$CI_PROJECT_NAME:$PACKAGE_VERSION
 
   

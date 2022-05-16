@@ -1,4 +1,6 @@
-.main_character__tittle{
+@import "../../ui/all-chars/all-char.ui.css";
+
+.banner__container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,17 +8,47 @@
     text-align: center;
     width: 100%;
     height: 50vh;
-    background-color: white;
+    background-color: var(--white-color);
+    box-shadow: var(--main-inner-shadow);
+}
+
+.banner__title{
+    text-align: center;
+    width: 100%;
     font-family: 'Catamaran', sans-serif;
     font-size: 5rem;
 	background: linear-gradient(to right, #312dff 0%, #F05454 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-    transition: 0.7s;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 0.7s all ease;
+    position: relative;
 }
 
+.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+.banner__subtitle{
+    --regular-font: 'Rock Salt', cursive;
+    --main-font-size: 1rem;
+    color: var(--dark-main-color);
+    cursor: pointer;
+    font-size: var(--main-font-size);
+}
+
+.banner__subtitle:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+
 @media only screen and (max-width: 768px){
-    .main_character__tittle{
+    .banner__title{
         font-size: 2rem;
+    }
+    .banner__subtitle{
+        --main-font-size: 0.8rem;
     }
 }

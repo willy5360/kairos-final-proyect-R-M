@@ -2,12 +2,13 @@ import { html, LitElement } from "lit"
 import { TrailerInfo } from "../../repositories/trailers-data.repository"
 import { MainCharactersInfo } from "../../repositories/main-characters.repository"
 
-
-import "../../components/contact-form/contact-form"
 import "../../components/main-characters/main-characters"
 import "../../components/cover/cover"
+import "../../components/footer/footer"
+
 import "../../ui/trailers/trailer.ui"
 import "../../ui/banner/banner.ui"
+
 import "./home.page.css"
 
 export class Home extends LitElement {
@@ -27,17 +28,18 @@ export class Home extends LitElement {
         super.connectedCallback()
         this.trailers = TrailerInfo
         this.mainCharacters = MainCharactersInfo
-    }
 
+    }
+    
     render(){
         return html`
         <main class="home__container">
             <back-video></back-video>
-            <home-banner .title="${"Meet the characters!"}"></home-banner>
+            <app-banner .title="${"Meet the characters!"}" .subtitle="${"Before you hate them..."}"></app-banner>
             <main-characters .mainCharacters="${this.mainCharacters}"></main-characters>
-            <home-banner .title="${"Watch season trailers!"}"></home-banner>
+            <app-banner .title="${"Watch season trailers!"}" .subtitle="${"...if you like to be spoiled"}"></app-banner>
             <season-trailers .trailers="${this.trailers}"></season-trailers>
-            <contact-form></contact-form>
+            <main-footer></main-footer>
             
         </main>
         `

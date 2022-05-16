@@ -17,7 +17,7 @@ navigation-bar{
 }
 
 .navbar a{
-    color: var(--tittle-main);
+    color: var(--red-main-color);
     text-decoration: none;
     font-weight: 600;
 }
@@ -32,6 +32,7 @@ navigation-bar{
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    /* color: var(--white-color); */
 }
 .navbar--logo img{
     width: 5rem;
@@ -41,14 +42,13 @@ navigation-bar{
 
 
 .sticky {
-    /* background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);  */
-    background-color: var(--tittle-main);
+    background-image: linear-gradient(to right, var(--red-main-color) 0%, var(--dark-main-color) 84%);
     padding: 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .sticky nav a {
-    color: #DDDDDD;
+    color: var(--white-color);
     
 }
 

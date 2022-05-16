@@ -1,5 +1,5 @@
 import { css, html, LitElement } from "lit";
-import "./all-char.ui.css"
+import "./all-char.ui.css";
 
 export class AllCharsUI extends LitElement {
     static get properties() {
@@ -20,16 +20,24 @@ export class AllCharsUI extends LitElement {
                         <div class="card-info">
                             <h1 class="font-large">${char.name}</h1>
                             <p>
-                                Status:
+                                <span> Status: </span>
                                 ${char.status == "Alive"
                                     ? "Alive 🟢"
                                     : char.status == "Dead"
                                     ? "Dead ⚫️"
                                     : "Unknown 🟡"}
                             </p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                            <p><span> Species: </span>${char.species}</p>
+                            <p>
+                                <span> Type: </span> ${char.type
+                                    ? char.type
+                                    : "Unknown"}
+                            </p>
+                            <p>
+                                <span> Gender: </span>${char.gender
+                                    ? char.gender
+                                    : "Not identified"}
+                            </p>
                         </div>
                     </main>
                 `
@@ -37,7 +45,7 @@ export class AllCharsUI extends LitElement {
         </article>`;
     }
 
-    createRenderRoot(){
+    createRenderRoot() {
         return this;
     }
 }

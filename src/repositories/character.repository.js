@@ -8,9 +8,8 @@ export class CharacterRepository {
     }
 
     async getAllChars() {
-        return await (
-            await axios.get("https://rickandmortyapi.com/api/character/")
-        ).data.results;
+        return (await axios.get("https://rickandmortyapi.com/api/character/"))
+            .data.results;
     }
 
     async getNext20chars(next) {
@@ -32,15 +31,17 @@ export class CharacterRepository {
     }
 
     async getFilteredChars(name, status) {
-        const filtered = await axios.get(
-            `https://rickandmortyapi.com/api/character/?name=${name.toLowerCase()}${
-                status ? `&status=${status}` : ""
-            }`
-        ).catch(error => {
-            console.log("Error",error.response)
-        });
+        const filtered = await axios
+            .get(
+                `https://rickandmortyapi.com/api/character/?name=${name.toLowerCase()}${
+                    status ? `&status=${status}` : ""
+                }`
+            )
+            .catch((error) => {
+                console.log("Error", error.response);
+            });
 
         console.log("fitler", filtered);
-        return filtered  ? await filtered.data.results : null;
+        return filtered ? filtered.data.results : null;
     }
 }

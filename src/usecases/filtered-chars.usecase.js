@@ -4,8 +4,7 @@ export class FilteredCharacters{
 
     async execute(name, status){
         const repository = new CharacterRepository()
-        const allFilteredChars = repository.getFilteredChars(name, status)
-        return allFilteredChars; 
+        return repository.getFilteredChars(name, status)
     }
 
 }

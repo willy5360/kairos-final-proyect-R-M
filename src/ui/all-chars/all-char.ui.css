@@ -3,22 +3,22 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-around;
-    background-color: #30475E;
-    padding: 8rem 0;
+    background-color: var(--dark-main-color);
+    padding: 0 0 5rem 0;
+    box-shadow: var(--main-inner-shadow);
 }
 
 .card-container {
     position: relative;
     width: 18rem;
-    height: 20rem;
-    background-color: #F05454;
+    height: 23rem;
+    background-color: var(--transparency-background);
     border-radius: 10px;
-    margin: 10rem 1rem 1rem 1rem;
+    margin: 8rem 1rem 1rem 1rem;
     transition: box-shadow 0.3s ease-in-out;
     display: flex;
     justify-content: center;
-    align-items: center;
-    transition: 0.7s;
+    align-items: flex-end;
 }
 
 
@@ -28,35 +28,30 @@
     animation-iteration-count: infinite;
 }
 
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
 
 .card-img {
     position: absolute;
-    top: -30%;
+    top: -27%;
     left: 15%;
     width: 70%;
     height: auto;
     border-radius: 0.5rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: var(--main-outside-shadow)
 }
 
 .card-info {
-    padding: 6rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 6rem 0.5rem;
+    color: var(--white-color);
+}
+
+.card-info p > span {
+    font-weight: 600;
 }
 .card-info h1 {
     text-align: center;
-    color: white;
+    color: var(--red-main-color);
 }

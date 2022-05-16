@@ -1,17 +1,51 @@
 card-person{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.one-character__container{
     width:100%;
-    height:100vh;
+    height:50vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    background-color: var(--background-main);
+    background-color: var(--red-main-color);
+}
+.static-banner > section > h1{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.one-character__button{
+    --main-size:80rem;
+    background-color: transparent;
+    border: none;
+    width:var(--main-size);
+    padding: 0;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
 }
 
 .openEyes{
-    position: absolute;
-    width: 40%;
+    --main-size: 30rem;
+    position: fixed;
+    width: var(--main-size);
     height: auto;
     bottom: 0;
     left: 0;
+}
+
+@media only screen and (max-width:768px){
+    .openEyes{
+        --main-size:40%
+    }
+    .one-character__button{
+        --main-size: 100%
+    }
 }

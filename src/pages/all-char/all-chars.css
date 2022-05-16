@@ -1,10 +1,74 @@
 .card-people__form{
-    padding-top: 9vh;
-    background-color: #30475E;
+    background-color: var(--red-main-color);
     width: 100%;
-    height: 5vh;
-    position: fixed;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 5vh;
+    padding: 1rem 0;
     z-index: 1;
+}
+
+.form-filter__container{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--transparency-background);
+    padding: 1rem;
+    border-radius: var(--main-border-radius);
+}
+
+.form-filter__container label {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+#character-name{
+    width: 50%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--white-color);
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--main-outside-shadow);
+}
+
+#character-name::placeholder{
+    color: transparent;
+}
+
+#status{
+    width: 20%;
+    padding: 0.9rem;
+    border: none;
+    background-color: var(--white-color);
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--main-outside-shadow);
+}
+
+.all-chars__button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 9em;
+    padding: 0.9rem;
+    border: none;
+    background-image: var(--button-main-color);
+    border-radius: var(--main-border-radius);
+    cursor: pointer;
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 600;
+    text-shadow: 0 0 1.5rem var(--dark-main-color);
+}
+
+.all-chars__button:hover{
+    box-shadow: var(--main-outside-shadow);
+
 }
 
 .card-people__buttons{
@@ -12,10 +76,47 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 5vh;
-    background-color: #30475E;
+    height: auto;
+    padding: 1rem 0;
+    background-color: var(--red-main-color);
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 1;
+}
+
+.circle{
+    width: auto;
+    height: 3rem;
+    --main-border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px){
+    .form-filter__container{
+        flex-direction: column;
+        padding: 1rem .5rem;
+    }
+
+    .form-filter__container label{
+        display: none;
+    }
+
+    #character-name::placeholder{
+        color: grey;
+    }
+
+    .card-people__form{
+        display: flex;
+        flex-wrap: wrap;
+        top: 7.5vh
+    }
+
+    #character-name{
+        width: 82%;
+        margin: 0.5rem;
+    }
+    #status{
+        width: inherit;
+        margin: 1rem 0;
+    }
 }

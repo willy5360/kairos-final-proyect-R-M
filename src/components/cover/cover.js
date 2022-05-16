@@ -1,4 +1,4 @@
-import { css, html, LitElement } from "lit";
+import { html, LitElement } from "lit";
 import "./cover.css"
 
 export class BackgroundVideo extends LitElement {
@@ -10,7 +10,7 @@ export class BackgroundVideo extends LitElement {
 
     render() {
         return html`
-            <div class="cover-container">
+            <main class="cover-container">
                 <video
                     class="cover-video"
                     src="https://res.cloudinary.com/willykronara/video/upload/v1652292964/trailer4_fninv7.mp4"
@@ -20,7 +20,7 @@ export class BackgroundVideo extends LitElement {
                 ></video>
                 <h1>Rick and Morty</h1>
                 <p>A fan page made with love</p>
-            </div>
+            </main>
         `;
     }
 

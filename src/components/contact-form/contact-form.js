@@ -1,4 +1,4 @@
-import { css, html, LitElement } from "lit";
+import { html, LitElement } from "lit";
 import "./contact-form.css"
 
 export class ContactForm extends LitElement {

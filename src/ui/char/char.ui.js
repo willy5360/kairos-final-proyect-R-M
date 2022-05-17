@@ -14,7 +14,7 @@ export class OneCharUI extends LitElement {
         return (
             this.char &&
             html`
-                <article class="card__oneChar-container">
+                <article class="card__oneChar-container" id="character_${this.char.id}">
                     <img class="card__oneChar-img" src="${this.char.image}" />
                     <main class="card__oneChar-info">
                         <h1>${this.char.name}</h1>

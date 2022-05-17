@@ -21,4 +21,16 @@ it("navbar change classes when scrolling", () => {
 
 })
 
+
+it("banner get the class active while scrolling to its position", () => {
+    cy.visit("/")
+    cy.scrollTo("bottom")
+    cy.get(':nth-child(2) > .banner__container > .banner__title').should("have.class", "active")
+})
+
+it("banner subtitle should shake on hover", () => {
+    cy.visit("/")
+    cy.get(':nth-child(2) > .banner__container > .banner__subtitle').trigger("mouseover")
+})
+
      

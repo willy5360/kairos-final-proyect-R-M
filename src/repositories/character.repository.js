@@ -41,7 +41,6 @@ export class CharacterRepository {
                 console.log("Error", error.response);
             });
 
-        console.log("fitler", filtered);
         return filtered ? filtered.data.results : null;
     }
 }

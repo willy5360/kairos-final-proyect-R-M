@@ -1,5 +1,4 @@
 import "./main.css";
-import "./app";
 import "./pages/one-char/one-char.page.js";
 import "./pages/home/home.page";
 import "./pages/all-char/all-chars.pages";

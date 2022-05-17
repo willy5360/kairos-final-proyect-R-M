@@ -5,5 +5,54 @@ contact-form {
     width: 60%;
     justify-content:center;
     align-items: center;
-    margin: auto;
+}
+
+.contact-form__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--transparency-background);
+    padding: 5rem;
+    border-radius: var(--main-border-radius);
+}
+
+.contact-form__container label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white-color);
+    text-shadow: 0 0 1px var(--dark-main-color);
+}
+
+.form-input{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: var(--main-border-radius);
+    border: none;
+    box-shadow: var(--main-outside-shadow);
+    background-color: var(--white-color);
+}
+
+.contact-form__container textarea {
+    width: 100%;
+    border-radius: var(--main-border-radius);
+    border: none;
+    box-shadow: var(--main-outside-shadow);
+    padding: 0.5rem;
+    background-color: var(--white-color);
+}
+
+.form-send__button{
+    margin: 1rem 0;
+    width: 30%;
+    padding: 0.5rem 1rem;
+    border-radius: var(--main-border-radius);
+    /* border: none; */
+    background-image: var(--button-main-color);
+    transition: 0.7s;
+}
+
+.form-send__button:hover{
+    box-shadow: var(--main-outside-shadow);
+    width: 33%;
 }

@@ -8,6 +8,7 @@
     background-color: var(--red-main-color);
     padding: 2rem 0;
     z-index: 0;
+    margin-bottom: 100vh;
     
 }
 

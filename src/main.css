@@ -25,7 +25,7 @@ time, mark, audio, video {
 
 :root{
 	--regular-font:'Source Sans Pro', sans-serif;
-	--inner-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+	--video-inner-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
 	--blue-main-color: #30475E;
 	--dark-main-color: #222831;
 	--red-main-color: #F05454;
@@ -36,6 +36,7 @@ time, mark, audio, video {
 	--main-outside-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
 	rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 	--main-border-radius: 10px;
+	--dark-gradient: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
 }
 
 

@@ -2,7 +2,7 @@
     height: 100vh;
     width: 100%;
     object-fit: contain;
-    box-shadow: var(--inner-shadow);
+    box-shadow: var(--video-inner-shadow);
     display: flex;
     flex-direction: column;
     justify-content: center;

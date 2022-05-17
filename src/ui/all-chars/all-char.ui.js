@@ -1,4 +1,4 @@
-import { css, html, LitElement } from "lit";
+import { html, LitElement } from "lit";
 import "./all-char.ui.css";
 
 export class AllCharsUI extends LitElement {

@@ -17,7 +17,7 @@
     width: var(--main-size);
     height: 10.5rem;
     object-fit: contain;
-    box-shadow: var(--inner-shadow);
+    box-shadow: var(--video-inner-shadow);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,6 +31,7 @@
     position: absolute;
     z-index: -1;
     object-fit: cover;
+    box-shadow: var(--main-outside-shadow);
 }
 
 .trailer__video-container > h1 {
@@ -38,7 +39,12 @@
     text-align: center;
     font-size: 4rem;
     font-weight: 550;
-    transition: 0.7s;
+    transition: 0.3s;
+}
+
+.trailer__video-container > h1:hover{
+    font-size: 4.2rem;
+    color: var(--red-main-color);
 }
 
 @media only screen and (max-width: 768px){

@@ -1,6 +1,7 @@
 import { html, LitElement } from "lit"
 import { TrailerInfo } from "../../repositories/trailers-data.repository"
 import { MainCharactersInfo } from "../../repositories/main-characters.repository"
+import 'genk-banner/genk-banner.js';
 
 import "../../components/main-characters/main-characters"
 import "../../components/cover/cover"
@@ -35,9 +36,11 @@ export class Home extends LitElement {
         return html`
         <main class="home__container">
             <back-video></back-video>
-            <app-banner .title="${"Meet the characters!"}" .subtitle="${"Before you hate them..."}"></app-banner>
+            <genk-banner .title="${"Meet the characters!"}" .subtitle="${"Before you hate them..."}"></genk-banner>
+            <!-- <app-banner .title="${"Meet the characters!"}" .subtitle="${"Before you hate them..."}"></app-banner> -->
             <main-characters .mainCharacters="${this.mainCharacters}"></main-characters>
-            <app-banner .title="${"Watch season trailers!"}" .subtitle="${"...if you like to be spoiled"}"></app-banner>
+            <!-- <app-banner .title="${"Watch season trailers!"}" .subtitle="${"...if you like to be spoiled"}"></app-banner> -->
+            <genk-banner .title="${"Watch season trailers!"}" .subtitle="${"...if you like to be spoiled"}"></genk-banner>
             <season-trailers .trailers="${this.trailers}"></season-trailers>
             <main-footer></main-footer>
             

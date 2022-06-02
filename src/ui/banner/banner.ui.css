@@ -20,14 +20,14 @@
 	background: linear-gradient(to right, #312dff 0%, #F05454 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-    transform: translateY(150px);
+    transform: translateX(250px);
     opacity: 0;
     transition: 0.7s all ease;
     position: relative;
 }
 
 .active{
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
 }
 .banner__subtitle{
